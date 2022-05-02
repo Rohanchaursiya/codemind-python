@@ -1,6 +1,8 @@
 n=int(input())
-j=n-1
-for i in range(1,n+1):
-    print(" "*j,end="")
-    print(10**(2*i-1)//9 *i)
-    j-=1
+for i in range(1,n+1,1):
+    for j in range(1,n+1,1):
+        if (j==1 or i==j or i==n):
+            print("*",end="")
+        else:
+            print("",end=" ")
+    print()
