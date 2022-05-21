@@ -1,0 +1,10 @@
+n=int(input())
+s=0
+m=1
+while(0<n):
+    r=n%10
+    temp=m*r
+    m=temp
+    s=s+r
+    n=n//10
+print(m-s)
