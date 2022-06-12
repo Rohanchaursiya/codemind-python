@@ -1,5 +1,3 @@
-s=input()
-words=s.split(' ')
-words=words[-1::-1]
-os=" ".join(words)
-print(os)
+string=input()
+rev_string=string[::-1]
+print(rev_string)
