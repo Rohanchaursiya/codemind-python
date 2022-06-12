@@ -1,0 +1,5 @@
+string=input()
+m=int(input())
+n=int(input())
+slice=(string[m:n+1])
+print(slice)
