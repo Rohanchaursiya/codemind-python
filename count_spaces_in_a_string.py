@@ -1,6 +1,6 @@
-s=input()
-c=0
-for i in s:
-    if (i==" "):
-        c=c+1
-print(c)
+string=input()
+count=0
+for i in string:
+    if i==" ":
+        count+=1;
+print(count)
