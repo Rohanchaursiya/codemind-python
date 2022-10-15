@@ -1,13 +1,13 @@
 def prime(n):
-    for i in range(2,n):
-        if n%i==0:
-            return False
+    for i in range(1,n):
+        for j in range(i+1,n):
+            if i*j==n:
+                return i,j
     else:
-        return True
+        return 0
 n=int(input())
-for i in range(2,n//2+1):
-    if n%i==0 and prime(i)==True and prime(n//i)==True:
-        print(i,n//i)
-        break
+l=prime(n)
+if l==0:
+    print(-1)
 else:
-    print("-1")
+    print(*l)
