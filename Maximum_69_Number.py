@@ -1,7 +1,8 @@
-s=input()
-for i in range(len(s)):
-    if s[i]=='6':
+n=input()
+n=list(n)
+for i in range(0,len(n)):
+    if n[i]=='6':
+        n[i]='9'
         break
-t="9"
-s=s[0:i]+t+s[i+1:]
-print(s)
+n="".join(n)
+print(n)
