@@ -1,33 +1,32 @@
-def ty(n):
-    t=n
-    d=0
-    while(t):
-        i=t%10
-        d=d*10+i
-        t=t//10
-    if(d==n):
-        return True
-    else:
-        return False
 n=int(input())
-i=n-1
-while(1):
-    if(ty(i)==1):
+l=[]
+for i in range(n//2,n):
+    temp=i
+    rev=0
+    while(i):
+        d=i%10
+        rev=rev*10+d
+        i=i//10
+    if(temp==rev):
+        l.append(rev)
+        l.reverse()
+for i in l:
+    temp=i
+    break
+m=n-temp
+for i in range(n+1,n**2):
+    tem=i
+    rev=0
+    while(i):
+        d=i%10
+        rev=rev*10+d
+        i=i//10
+    if(tem==rev):
+        k=abs(n-rev)
         break
-    i-=1
-t=n+1
-while(1):
-    if(ty(t)==1):
-        break
-    t+=1
-if(abs(t-n)>abs(i-n)):
-    print(i)
-elif(abs(t-n)==abs(i-n)):
-    if(n>t):
-        print(t,end=" ")
-        print(i,end=" ")
-    else:
-        print(i,end=" ")
-        print(t,end=" ")
+if(m==k):
+    print(temp,rev)
+elif(m>k):
+    print(rev)
 else:
-    print(t)
+    print(temp)
